@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+script: mvn test
+before_deploy:
+  - git checkout master
+  - mvn package -DskipTests=true
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: mvn -s .travis-maven-settings.xml release:prepare -B && mvn -s .travis-maven-settings.xml release:perform
+  on:
+    branch: master
+    tags: true
