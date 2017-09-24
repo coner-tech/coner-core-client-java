@@ -1,0 +1,37 @@
+{
+    "package": {
+        "name": "coner-core-client-java",
+        "repo": "coner-core",
+        "subject": "caeos",
+        "desc": "Java client for Coner Core",
+        "website_url": "https://github.com/caeos/coner-core-client-java",
+        "issue_tracker_url": "https://github.com/caeos/coner-core/issues",
+        "vcs_url": "git@github.com:caeos/coner-core-client-java.git",
+        "github_use_tag_release_notes": false,
+        "licenses": [
+            "MIT"
+        ],
+        "labels": [
+            "coner core",
+            "client",
+            "java"
+        ],
+        "public_download_numbers": false,
+        "public_stats": false
+    },
+    "version": {
+        "name": "v0.1.18",
+        "desc": "v0.1.18",
+        "released": "2017-09-24T22:21:04+00:00",
+        "vcs_tag": "4be0c79a4fe3e8a487453c73892233eb8c001e98",
+        "gpgSign": false
+    },
+    "files": [
+        {
+            "includePattern": "target/(coner-core-client-java.*\\.jar)",
+            "excludePattern": "target/(.*tests.*)",
+            "uploadPattern": "/$1"
+        }
+    ],
+    "publish": true
+}
