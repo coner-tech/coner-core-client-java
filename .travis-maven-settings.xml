@@ -9,7 +9,7 @@
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
         <server>
-            <id>github-caeos-coner-core-client-java</id>
+            <id>github.com</id>
             <username>git</username>
             <privateKey>.travis/keys/github_deploy</privateKey>
         </server>
