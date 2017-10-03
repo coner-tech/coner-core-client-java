@@ -8,5 +8,10 @@
             <username>carlton-whitehead</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
+        <server>
+            <id>github-caeos-coner-core-client-java</id>
+            <username>git</username>
+            <privateKey>.travis/keys/github_deploy</privateKey>
+        </server>
     </servers>
 </settings>
