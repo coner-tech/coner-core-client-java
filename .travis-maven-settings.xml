@@ -12,6 +12,7 @@
             <id>github.com</id>
             <username>git</username>
             <privateKey>${user.home}/.ssh/github_deploy</privateKey>
+            <passphrase></passphrase>
         </server>
     </servers>
 </settings>
