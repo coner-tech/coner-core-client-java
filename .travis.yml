@@ -13,7 +13,7 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
-    - mvn -s .travis-maven-settings.xml release:prepare -B -X
-    - mvn -s .travis-maven-settings.xml release:perform -X
+    - mvn -s .travis-maven-settings.xml -B -X release:prepare
+    - mvn -s .travis-maven-settings.xml -X release:perform
   on:
     branch: master
