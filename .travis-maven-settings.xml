@@ -11,8 +11,7 @@
         <server>
             <id>github.com</id>
             <username>git</username>
-            <privateKey>.travis/keys/github_deploy</privateKey>
-            <passphrase></passphrase>
+            <privateKey>${user.home}/.ssh/github_deploy</privateKey>
         </server>
     </servers>
 </settings>
