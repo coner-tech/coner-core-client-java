@@ -10,7 +10,7 @@
   <description>Swagger Java</description>
   <scm>
     <connection>scm:git:git@github.com:caeos/coner-core-client-java.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/caeos/coner-core-client-java.git</developerConnection>
+    <developerConnection>scm:git:ssh://github.com/caeos/coner-core-client-java.git</developerConnection>
     <url>https://github.com/caeos/coner-core-client-java</url>
   </scm>
   <prerequisites>
