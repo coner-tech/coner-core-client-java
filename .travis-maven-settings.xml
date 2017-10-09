@@ -9,9 +9,9 @@
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
         <server>
-            <id>github.com</id>
-            <username>git</username>
-            <password>${env.GITHUB_DEPLOY_PASSWORD}</password>
+            <id>github-caeos-coner-core-client-java-deploy</id>
+            <privateKey>${user.home}/.ssh/github_deploy</privateKey>
+            <passphrase></passphrase>
         </server>
     </servers>
 </settings>
