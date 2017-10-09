@@ -10,8 +10,8 @@
         </server>
         <server>
             <id>github.com</id>
-            <username>${env.GITHUB_DEPLOY_USERNAME}</username>
-            <password>${env.GITHUB_DEPLOY_PASSWORD}</password>
+            <privateKey>${user.home}/.ssh/github_deploy</privateKey>
+            <passphrase></passphrase>
         </server>
     </servers>
 </settings>
