@@ -10,7 +10,7 @@
         </server>
         <server>
             <id>github.com</id>
-            <username>git</username>
+            <username>${env.GITHUB_DEPLOY_USERNAME}</username>
             <password>${env.GITHUB_DEPLOY_PASSWORD}</password>
         </server>
     </servers>
