@@ -6,13 +6,14 @@ before_deploy:
   - git checkout master
   - mvn package -DskipTests=true
   - openssl aes-256-cbc -K $encrypted_7c93ac5960c4_key -iv $encrypted_7c93ac5960c4_iv
-    -in .travis/keys/github_deploy.enc
+    -in .travis/ssh/github_deploy.enc
     -out ~/.ssh/github_deploy -d
-  - cp .travis/keys/github_deploy.pub ~/.ssh/
+  - cp .travis/ssh/github_deploy.pub ~/.ssh/
+  - cp .travis/ssh/config ~/.ssh/
 deploy:
   skip_cleanup: true
   provider: script
-  script: mvn -s .travis-maven-settings.xml -B -X release:prepare -Darguments="--settings .travis-maven-settings.xml" -Dusername=$GITHUB_DEPLOY_USERNAME -Dpassword=$GITHUB_DEPLOY_PASSWORD && mvn -s .travis-maven-settings.xml -X release:perform
+  script: mvn -s .travis-maven-settings.xml -B -X release:prepare -Darguments="--settings .travis-maven-settings.xml" && mvn -s .travis-maven-settings.xml -X release:perform
   on:
     branch: master
 env:
