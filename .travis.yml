@@ -14,10 +14,6 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: script
-  script: mvn -s .travis-maven-settings.xml -B -X release:prepare -Darguments="--settings .travis-maven-settings.xml" && mvn -s .travis-maven-settings.xml -X release:perform
+  script: mvn -s .travis/maven-settings.xml -B -X release:prepare -Darguments="--settings .travis/maven-settings.xml" && mvn -s .travis/maven-settings.xml -X release:perform -Darguments="--settings .travis/maven-settings.xml"
   on:
     branch: master
-env:
-  global:
-  - secure: DKZiHGKlbMYIi/ntYKon1zHCs/IXXTA9rrrN1O09d6V3J+g3TpWfqZN48NUCInp3YQ8KxNM9TqnctToG9BRc8BHmt4Nr5mvjEwjE3fvW5MtkYC8bQuoOYczyIRZFHak6ZtONMMly3NXTJ1YWJbjgSHS3PjbnRWdCUI14n0QV7XETmPRMW7lv5H/XS9X3iTFW3Nle6/xkwCoz2QLWh/VUOkk2i+cxdAPdAXzz1rmxYJ+3i6k5yIElu76XIS/teIBidZ3i9SquPxvy/+KS555uLjuGlp+20b4pkXNNFetCwW64P1JoyppkanDmU4vipDE7ZMQkSxZXgWc37uln0lK7iZL2qwTM48Kg0HondLd7SnKuU0MCckTUpvJBnD1gUOn8edAjh7P+zPMlUHTJ2djOdsooRlM1Q88bv0JyLk8kuG8O61NVVmIMLHflFkPn5UYahA6NaUpqo5+tPswHoIOTzrxh4sgNfXa3MXUZnv7pRnqCUZ4u9V/ah9+m7OlM33SKVyZoQooxjnIStprcrDNtxsVasqmJaH5iZPLaqCACkhLQFWLODgi+LCw9ToKKx8erym+rbT06oehDONrG9bqsY1bRyata91BRWx7i66OisAS551TcJZOSEpBUlbj2PlsUiiBG0ZwVJ689bHxcY5feHq7aj3k1kz47ANwWKNvBW6Y=
-  - secure: P8cffP0uHbbcF2LZnjzmLwWuRWgSskVNSCoJkjHcIcnolZ/3JTXgISyY+6nfIYvrQlkyjg1UV213I5kRj47AKf2zD+kfuMzk6MqjcIe2N2i5Ne6u1aT7CTKOlpSWlJDXbC0t99C3QTr4MudLLsIbtCjnf3P846SqFYnmUBn7L53d2PhmLKrpYnmpK17+nP2fZSjtSeP0K01ZP4UrIW5rWDIoFMqwvuOGyQGrLpQldH5jGRJYxg43hJLSc2+pdVg+E3nSmZxbXE0dlFkEquQDFoj7JaZtQRQRF82RfbEZ26GYvrVNztZpup3pE3p2jkVGq7MVDZ1erlF2aAGXmnKglBLwR3cz4lrIltBUHn3xsI2jYYqn7adU0r6uuX7daSVA+QpGP6Oi99YSSvydHmK5K246k3TOZbpcMv4xzXFSN2IlyCQxkL7Dqm/pkoVm7SyaH+dLZT5mN/GYTh4mS3rqacTqb9LSc/fHveNM3OWcAqgI0U44NCPeGxFKCX0P90gPTx26q60fspGkANkWGhgjfvES6/GSf/L8X8AmZZepybQjpjglpE2/Balh9/06LjH+t4N+/bX4TvrpE1pZM9yDCAQLFhF0BG/jJbmppa/PRwNTREKxglfIvXBlP1B+CQa+eCb3HbOu//45Fpv30MxRnvKgHxrfmCoIZJ9SdOItqCk=
